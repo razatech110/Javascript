@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<!-- Todays Lecture - Change Attributes in JS -->
+<body>
+
+    <h1 id="heading">Switching Bulb ON/OFF</h1>
+    <img id="bulb" src="./bulb-off.png" width="200px">
+    <br>
+    <button id="btn">Click Me</button>
+
+    <script>
+
+        let heading = document.getElementById("heading");
+        let btn = document.getElementById("btn");
+        let bulbImg = document.getElementById("bulb");
+
+        heading.style.border = "1px solid red";
+        heading.style.padding = "10px";
+
+
+        let isBulbOn = false;
+
+        // event listeners
+        btn.addEventListener("click", function () {
+
+            
+
+            if (isBulbOn == false) {
+                bulbImg.src = "./bulb-on.png";
+                bulbImg.alt = "bulb on image";
+                isBulbOn = true;
+              heading.style.backgroundColor = "gold";
+            } else {
+                bulbImg.src = "./bulb-off.png";
+                bulbImg.alt = "bulb off image";
+                isBulbOn = false;
+                 heading.style.backgroundColor = "transparent";
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
