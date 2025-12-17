@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+Div height & width with JS
+--------------------------------------------------
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background-color: gold;
+            height: 10px;
+            width: 10px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="input1" type="number" placeholder="width" />
+    <input id="input2" type="number" placeholder="height" />
+    <button id="btn">Click Me</button>
+    <div id="box"></div>
+
+
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let btn = document.getElementById("btn");
+        let box = document.getElementById("box");
+
+
+
+        btn.addEventListener("click", function () {
+
+            let input1Val = input1.value;
+            let input2Val = input2.value;
+
+
+            // type casting 1
+            // let input1Num = Number(input1Val);
+
+            // type casting 2
+            // let input1Num = parseInt(input1Val);
+
+            // type casting 3
+            //  let input1Num = parseFloat(input1Val);
+
+            // type casting 4
+            let input1Num = +input1Val;
+            let input2Num = parseInt(input2Val);
+
+
+            box.style.width = ${input1Num}px;
+            box.style.height = ${input2Num}px;
+
+        });
+
+    </script>
+</body>
+</html>
