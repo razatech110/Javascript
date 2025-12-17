@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Bulb ON/OFF </title>
+</head>
+
+<body>
+
+     <h1 id="head">Bulb ON/OFF Through JS </h1>
+     <p id="para1"> >> This is Azam "Mithai Wala" << </p>
+
+     <img id="bulb" src="./assets/images/bulb-off.jpg" width="200px"><br><br>
+
+     <button href="" id="btn">Click Here</button>
+
+     <script>
+
+          let head = document.getElementById("head");
+          let para1 = document.getElementById("para1");
+          let btn = document.getElementById("btn");
+          let bulbimg = document.getElementById("bulb");
+
+
+          let isBulbOn = false;
+
+          btn.addEventListener("click", function () {
+
+               if (isBulbOn == false) {
+
+                    bulbimg.src = "./assets/images/bulb-on.jpg";
+                    bulbimg.alt -= "Now bulb is ON image is available here";
+                    isBulbOn = true;
+                    head.style.backgroundColor = "yellow";
+                    para1.style.backgroundColor = "yellow";
+                    head.style.color = "purple";
+                    head.innerText = "Bulb is ON";
+
+               }
+
+               else {
+
+                    bulbimg.src = "./assets/images/bulb-off.jpg";
+                    bulbimg.alt -= "Now bulb is OFF image is available here";
+                    isBulbOn = false;
+                    head.style.backgroundColor = "transparent";
+                    para1.style.backgroundColor = "transparent";
+                    head.style.color = "black";
+                    head.innerText = "Bulb is OFF";
+
+               }
+          
+          });
+
+
+     </script>
+</body>
+
+</html>
