@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+
+     // indexex -> elements 
+let student = [49, "ali", "lahore"];
+// console.log( student[1] )
+
+// objects are key:value pairs
+
+let stdObj = {
+  age: 27,
+  city: "Lahore",
+  walking: function(name) {
+    console.log("A " + name + " can walk");
+  }
+}
+
+// dot notation
+console.log(stdObj.age );
+// array notation
+console.log(stdObj['city'] );
+
+// CRUD
+console.log(stdObj);
+
+
+//create new value
+  // stdObj.marks = 88;
+  //stdObj['marks'] = 90;
+
+// update value
+  //stdObj.age = 88;
+  //stdObj['age'] = 90;
+
+// delete a key:value
+   //delete stdObj.age;
+
+stdObj.walking("Saleem");
+
+console.log(stdObj)
+
+
+For in ----- for - of loops
+----------------------------------------------
+
+let stdObj = {
+  name: "ali",
+  age: 20,
+  city: "Lahore"
+};
+
+// for --- in
+
+for(let k in stdObj) {
+    console.log( stdObj[k] )
+}
+
+// for -- of loop
+let nums = [20, 30, 50, 65, 10];
+for(let v of nums) {
+    console.log(v)
+}
+
+// will return indexes of array
+for(let i in nums) {
+  console.log(i)
+}
+
+
+</body>
+</html>
