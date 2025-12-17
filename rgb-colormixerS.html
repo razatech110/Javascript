@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color mixer</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 220px;
+            border: 1px solid red;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    Red: 0<input type="range" value="0" id="red" min="0" max="255" step="1" style="width: 350px;">255 <br>
+    Green: 0<input type="range" value="0" id="green" min="0" max="255" step="1" style="width: 350px;">255 <br>
+    Blue: 0<input type="range" value="0" id="blue" min="0" max="255" step="1" style="width: 350px;">255 <br>
+
+    <div id="box"></div>
+
+
+    <script>
+        let redInput = document.getElementById("red");
+        let greenInput = document.getElementById("green");
+        let blueInput = document.getElementById("blue");
+        let box = document.getElementById("box");
+
+        let redInputValue = 0;
+        let greenInputValue = 0;
+        let blueInputValue = 0;
+
+        // red value
+        redInput.addEventListener("input", function () {
+            redInputValue = redInput.value;
+            console.log(`Red Input Value: `, redInputValue);
+            box.style.backgroundColor = `rgb(${redInputValue}, ${greenInputValue}, ${blueInputValue})`;
+        });
+
+        // red value
+        greenInput.addEventListener("input", function () {
+            greenInputValue = greenInput.value;
+            console.log(`Green Input Value: `, greenInputValue);
+            box.style.backgroundColor = `rgb(${redInputValue}, ${greenInputValue}, ${blueInputValue})`;
+
+        });
+
+        // red value
+        blueInput.addEventListener("input", function () {
+            blueInputValue = blueInput.value;
+            console.log(`Blue Input Value: `, blueInputValue);
+            box.style.backgroundColor = `rgb(${redInputValue}, ${greenInputValue}, ${blueInputValue})`;
+
+        });
+
+
+    </script>
+</body>
+
+</html>
