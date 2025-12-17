@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+Type Casting in JS
+--------------------------------------------------
+
+<body>
+    <h1 id="heading">Forms in JS</h1>
+    <input id="input1" type="number" placeholder="Number 1" />
+    <input id="input2" type="number" placeholder="Number 2" />
+    <button id="btn">Click Me</button>
+
+    <h1 id="result">Total: 0</h1>
+
+
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let btn = document.getElementById("btn");
+        let result = document.getElementById("result");
+
+
+
+        btn.addEventListener("click", function () {
+
+            let input1Val = input1.value;
+            let input2Val = input2.value;
+
+            // type casting 1
+            // let input1Num = Number(input1Val);
+
+            // type casting 2
+            // let input1Num = parseInt(input1Val);
+
+            // type casting 3
+            //  let input1Num = parseFloat(input1Val);
+
+            // type casting 4
+             let input1Num = +input1Val;
+             let inpu2Num = parseInt(input2Val);
+
+            // result.innerText = "Total: " + input1Num + inpu2Num;
+            result.innerText = `Total: ${input1Num + inpu2Num} `;
+
+           
+
+        });
+
+    </script>
+</body>
+
+</html>
