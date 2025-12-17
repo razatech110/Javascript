@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+
+     Today's Lecture
+
+let a = 20;
+let name =  "ali khan";
+
+let student = ["ali", 20, "lodhran", true];
+
+console.log( student[2] );
+
+
+let fruits = ["apple", "banana", "cherry"];
+
+console.log( fruits.length );
+console.log(name.length);
+
+
+
+
+
+
+array methods
+
+
+let fruits = ["apple", "cherry"];
+
+console.log(fruits);
+
+// push -> add new element at the end
+// fruits.push("banana");
+
+// pop -> remove element from end
+// fruits.pop();
+
+// unshift -> add element at beginning of array
+// fruits.unshift("banana");
+
+// shift -> remove element from start
+// fruits.shift();
+
+// length property to check count of array
+// console.log(fruits.length);
+
+
+// console.log(fruits.reverse());
+
+let a = [1, 2];
+let b = [3, 4];
+
+let c = a.concat(b);
+
+console.log(c);
+
+
+let nums = [56, 76, 12, 45, 53, 13, 50];
+
+// console.log(nums.length);
+
+// loop through arrays
+let evens = [];
+let odds  = [];
+
+for(let i = 0; i < nums.length; i++) {
+
+    if( nums[i] % 2 == 0) {
+      evens.push(nums[i]);
+
+    } else {
+
+      odds.push(nums[i]);
+    }
+
+
+    // console.log( nums[i] )
+}
+
+
+
+console.log("evens: ", evens);
+console.log("odss: ", odds);
+
+let total = 0;
+
+for (let i = 0; i < nums.length; i++) {
+  total += nums[i];
+}
+console.log("Total: ", total)
+
+</body>
+</html>
