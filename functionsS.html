@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+
+     today's Lecture
+-------------------------------
+function sum (n1, n2, n3 = 0) {
+  let res = (n1 + n2) * n3;
+  return res;
+}
+
+ let a = 7;
+ let b = 8;
+ let result = sum(a, b);
+
+ console.log(result);
+
+ let result2 = sum(2, 3, 3);
+
+ console.log(result2)
+
+
+
+
+
+function writeTable(n1, end = 10) {
+
+  for (let i = 0; i <= end; i++) {
+
+    if (i % 2 != 0) {
+      console.log(n1 + " X " + i + " = " + n1 * i);
+    }
+
+  }
+
+}
+
+
+writeTable(3, 20);
+
+console.log("-------------------")
+writeTable(6);
+
+</body>
+</html>
