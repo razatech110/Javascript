@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<!-- Get data from Forms using JS -->
+
+<body>
+    <h1 id="heading">Forms in JS</h1>
+    <input id="input1" type="text" placeholder="text color" />
+    <input id="input2" type="text" placeholder="text background" />
+    <input id="input3" type="text" placeholder="text content" />
+    
+
+    <button id="btn">Click Me</button>
+
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let input3 = document.getElementById("input3");
+        let btn    = document.getElementById("btn");
+        let heading = document.getElementById("heading");
+
+
+
+        btn.addEventListener("click", function(){
+
+            let input1Val = input1.value;
+            let input2Val = input2.value;
+            let input3Val = input3.value;
+
+            heading.style.color = input1Val;
+            heading.style.backgroundColor = input2Val;
+
+            // update content
+            heading.innerText = input3Val;
+
+            console.log(typeof input1Val);
+
+        });
+
+    </script>
+</body>
+
+</html>
