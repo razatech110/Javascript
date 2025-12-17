@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     For in ----- for - of loops
+----------------------------------------------
+
+let stdObj = {
+  name: "ali",
+  age: 20,
+  city: "Lahore"
+};
+
+// for --- in
+
+for(let k in stdObj) {
+    console.log( stdObj[k] )
+}
+
+// for -- of loop
+let nums = [20, 30, 50, 65, 10];
+for(let v of nums) {
+    console.log(v)
+}
+
+// will return indexes of array
+for(let i in nums) {
+  console.log(i)
+}
+
+
+Call back functions in JS
+--------------------------------------------------
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+
+function sayBye() {
+  console.log("Good Bye");
+}
+
+
+// greet("ali", sayBye);
+// greet("saleem", function() {
+//   console.log("Good Bye");
+// })
+
+forEach Loop in JS
+----------------------------------------
+let fruits = ["apple", 33, "banana", "cherry", 56,];
+
+
+fruits.forEach(function (x, y) {
+  console.log(x)
+})
+</body>
+</html>
