@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+
+
+    <h1 id="heading">hello class</h1>
+    <p id="para">This is para</p>
+    <button id="btn">Click Me</button>
+
+    <style>
+        /* #heading {
+            color: red;
+        } */
+    </style>
+
+    <script>
+
+        let stdObj = {
+            name: "ali",
+            age: 20,
+            subjects: ["eng", 'math', 'phy'],
+            marks: {
+                math: 20,
+                eng: 50,
+                phy: 60,
+                practical: {
+                    math: 90,
+                    eng: 59
+                }
+            }
+        }
+
+        // console.log( stdObj );
+
+        // stdObj.name = "khalid";
+
+        // console.log(stdObj)
+
+        console.log(stdObj.marks['eng']);
+        console.log(stdObj.marks.practical.eng);
+
+
+
+        // dom -> document object model
+        let heading = document.getElementById("heading");
+        let para = document.getElementById("para");
+        let btn = document.getElementById("btn");
+
+        // heading.style.color = "red";
+        // heading.style.backgroundColor = "gold";
+        // heading.style.textAlign = "center";
+
+
+
+
+
+        // changing content
+        heading.innerText = "hi class";
+        heading.innerHTML
+
+
+        console.log(heading);
+
+        para.style.border = "1px solid red";
+        para.style.padding = "10px";
+
+        // para.innerText = "Go to <a href='https:www.google.com'>Google</a> ";
+        // para.innerHTML = "Go to <a href='https:www.google.com'>Google</a> ";
+        para.textContent = "Go to <a href='https:www.google.com'>Google</a> ";
+
+
+        // event listeners
+        btn.addEventListener("click", function () {
+
+            heading.style.color = "red";
+            heading.style.backgroundColor = "gold";
+            heading.style.textAlign = "center";
+
+
+        })
+
+    </script>
+</body>
+</html>
