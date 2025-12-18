@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<!-- Div height width controls using JS
+-------------------------------------------------------------------- -->
+
+<body>
+    Heigh: 0<input type="range" class="controls" value="10" id="height" min="0" max="500" step="1"
+        style="width: 350px;">500 <br>
+    Width: 0<input type="range" class="controls" value="0" id="width" min="0" max="500" step="1"
+        style="width: 350px;">500 <br>
+
+
+    <div id="box"></div>
+
+    <input type="text" id="inputBox" placeholder="type here" />
+    <button id="btn">Click Me</button>
+
+
+    <script>
+
+        let btn = document.getElementById("btn");
+        let inputBox = document.getElementById("inputBox");
+
+        btn.addEventListener("click", function (event) {
+            console.log(event.target);
+        });
+
+        inputBox.addEventListener("keyup", function (event) {
+            console.log(event.target);
+        })
+
+
+        // let heightInput = document.getElementById("height");
+        // let widthInput = document.getElementById("width");
+        // let box = document.getElementById("box");
+        // let box = document.querySelector("#box")
+
+
+        // heightInput.addEventListener("input", function(){
+        //     box.style.height = ${heightInput.value}px;
+        // });
+
+        // widthInput.addEventListener("input", function(){
+        //     box.style.width = ${widthInput.value}px;
+        // });
+
+        // selection by class name
+        // let controls = document.getElementsByClassName("controls");
+
+        // query selector
+        let controls   = document.querySelectorAll(".controls");
+
+        console.log(controls)
+        //console.log( controls[1].value );
+
+        for (let elm of controls) {
+            elm.addEventListener("input", function (event) {
+                // console.log(event.target.id)
+                if(event.target.id == "height") {
+                    box.style.height = `${event.target.value}px`;
+                } else {
+                     box.style.width = `${event.target.value}px`;
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>
