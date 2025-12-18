@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>practice rough</title>
+     <style>
+          #box {
+               border: 2px solid red;
+               margin: 50px auto;
+               width: 200px;
+               height: 150px;
+          }
+     </style>
+</head>
+
+<body>
+
+     <h3>Practice Of Range with Width & Height</h3>
+     Width: <input type="range" name="box-width" id="width" value="0" step="1" style="width: 400px"><br><br>
+     Height: <input type="range" name="box-height" id="height" value="0" step="1" style="width: 400px"><br>
+     Height: <input type="color" name="color-check" id="color" value="0" step="1" style="width: 150px"><br>
+
+
+     <div id="box"></div>
+
+     <script>
+          let width  = document.getElementById("width");
+          let height = document.getElementById("height");
+          let box    = document.getElementById("box");
+          let color  = document.getElementById("color");
+
+
+          let widthVal = 0;
+          let heightVal = 0;
+
+          width.addEventListener("input", function(){
+
+               widthVal = width.value;
+          });
+
+
+
+
+
+     </script>
+
+
+</body>
+
+</html>
