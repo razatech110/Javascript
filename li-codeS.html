@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+Creating elements using JavaScript
+-------------------------------------------------------------------
+<body>
+
+    <input type="text" id="inputBox" placeholder="type item">
+    <button id="btn">Click Me</button>
+
+    <ul id="list">
+        <li>apple</li>
+    </ul>
+
+
+    <script>
+        let inputBox = document.getElementById("inputBox");
+        let btn = document.getElementById("btn");
+        let list = document.getElementById("list");
+
+
+        btn.addEventListener("click", function () {
+
+            // get value from input
+            let inputVal = inputBox.value;
+
+            // create new element li
+            let item = document.createElement("li");
+                //console.log(item);
+
+            // insert text content
+            item.textContent = inputVal;
+                //console.log(item);
+
+            // insert list item into ul
+            list.appendChild(item);
+
+            //empty input field
+            inputBox.value = "";
+
+        });
+
+
+    </script>
+</body>
+</html>
