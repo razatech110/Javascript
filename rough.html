@@ -9,18 +9,18 @@
           #box {
                border: 2px solid red;
                margin: 50px auto;
-               width: 200px;
-               height: 150px;
+               width: 50px;
+               height: 40px;
           }
      </style>
 </head>
 
 <body>
 
-     <h3>Practice Of Range with Width & Height</h3>
-     Width: <input type="range" name="box-width" id="width" value="0" step="1" style="width: 400px"><br><br>
-     Height: <input type="range" name="box-height" id="height" value="0" step="1" style="width: 400px"><br>
-     Height: <input type="color" name="color-check" id="color" value="0" step="1" style="width: 150px"><br>
+     <h1>Practice Of Range with Width & Height</h1>
+     Width: 0 <input type="range" min="0" max="800" id="width" value="0" step="1" style="width: 350px"> 800px<br><br>
+     Height: 0 <input type="range" min="0" max="400" id="height" value="0" step="1" style="width: 350px"> 400px<br><br>
+     Color: <input type="text" id="color" placeholder="Type your color name" style="width: 250px; height: 30px; margin-left: 10px"><br>
 
 
      <div id="box"></div>
@@ -38,9 +38,18 @@
           width.addEventListener("input", function(){
 
                widthVal = width.value;
+               box.style.width = `${widthVal}px`;
           });
 
+          height.addEventListener("input", function(){
 
+               heightVal = height.value;
+               box.style.height = `${heightVal}px`;
+          });
+
+          color.addEventListener("input", function(){
+               box.style.backgroundColor = color.value;
+          });
 
 
 
