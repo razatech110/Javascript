@@ -4,27 +4,37 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
+     <style>
+        #box{
+            height: 50px;
+            width: 50px;
+            background-color: gold;
+            margin: 50px auto;
+            
+        }
+     </style>
 </head>
 <!-- Div height width controls using JS
 -------------------------------------------------------------------- -->
 
 <body>
-    Heigh: 0<input type="range" class="controls" value="10" id="height" min="0" max="500" step="1"
-        style="width: 350px;">500 <br>
-    Width: 0<input type="range" class="controls" value="0" id="width" min="0" max="500" step="1"
-        style="width: 350px;">500 <br>
-
-
-    <div id="box"></div>
+    Height: <span id="inputvaluee">0px</span><input type="range" class="controls" value="10" id="height" min="0" max="500" step="1"
+        style="width: 350px;">500px <br><br>
+    Width: <span id="inputvalue">0px</span><input type="range" class="controls" value="0" id="width" min="0" max="500" step="1"
+        style="width: 350px;">500px <br><br>
 
     <input type="text" id="inputBox" placeholder="type here" />
-    <button id="btn">Click Me</button>
+    <button id="btn">Click Me</button><br>
+    <div id="box"></div>
 
 
     <script>
 
         let btn = document.getElementById("btn");
         let inputBox = document.getElementById("inputBox");
+        let inputVal = document.getElementById("inputvaluee")
+        let inputValue = document.getElementById("inputvalue")
+
 
         btn.addEventListener("click", function (event) {
             console.log(event.target);
@@ -32,7 +42,7 @@
 
         inputBox.addEventListener("keyup", function (event) {
             console.log(event.target);
-        })
+        });
 
 
         // let heightInput = document.getElementById("height");
@@ -63,8 +73,10 @@
                 // console.log(event.target.id)
                 if(event.target.id == "height") {
                     box.style.height = `${event.target.value}px`;
+                    inputVal.innerHTML = `${event.target.value}px : `;
                 } else {
                      box.style.width = `${event.target.value}px`;
+                     inputValue.innerHTML = `${event.target.value}px : `;
                 }
             });
         }
